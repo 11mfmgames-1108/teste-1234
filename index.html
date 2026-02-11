@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pac-Man 3D Infinito</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #020513;
+        color: #fff;
+      }
+
+      #hud {
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 3;
+        padding: 10px 14px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 14px rgba(0, 255, 255, 0.2);
+        line-height: 1.5;
+      }
+
+      #help {
+        position: fixed;
+        bottom: 14px;
+        left: 14px;
+        z-index: 3;
+        padding: 8px 12px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.35);
+        font-size: 13px;
+      }
+
+      #game-over {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 5;
+      }
+
+      #game-over-content {
+        text-align: center;
+        background: #08152b;
+        border: 1px solid #2f6d9f;
+        border-radius: 12px;
+        padding: 20px 24px;
+      }
+
+      button {
+        margin-top: 10px;
+        border: 0;
+        border-radius: 8px;
+        padding: 9px 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      <div><strong>Pac-Man 3D Infinito</strong></div>
+      <div>Pontos: <span id="score">0</span></div>
+      <div>Vidas: <span id="lives">3</span></div>
+      <div>Velocidade: <span id="speed">1.00x</span></div>
+    </div>
+
+    <div id="help">Mover: WASD / Setas · Reiniciar: R</div>
+
+    <div id="game-over">
+      <div id="game-over-content">
+        <h2>Game Over</h2>
+        <p id="final-score"></p>
+        <button id="restart-btn">Jogar novamente</button>
+      </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
