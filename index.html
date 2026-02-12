@@ -22,9 +22,10 @@
         z-index: 3;
         padding: 10px 14px;
         border-radius: 10px;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.44);
         box-shadow: 0 0 14px rgba(0, 255, 255, 0.2);
         line-height: 1.5;
+        min-width: 195px;
       }
 
       #help {
@@ -56,6 +57,11 @@
         padding: 20px 24px;
       }
 
+      .value {
+        color: #87ffdd;
+        font-weight: 700;
+      }
+
       button {
         margin-top: 10px;
         border: 0;
@@ -69,12 +75,14 @@
   <body>
     <div id="hud">
       <div><strong>Pac-Man 3D Infinito</strong></div>
-      <div>Pontos: <span id="score">0</span></div>
-      <div>Vidas: <span id="lives">3</span></div>
-      <div>Velocidade: <span id="speed">1.00x</span></div>
+      <div>Pontos: <span class="value" id="score">0</span></div>
+      <div>Vidas: <span class="value" id="lives">3</span></div>
+      <div>Velocidade: <span class="value" id="speed">1.00x</span></div>
+      <div>Modo: <span class="value" id="mode">NORMAL</span></div>
+      <div>Combo: <span class="value" id="combo">0</span></div>
     </div>
 
-    <div id="help">Mover: WASD / Setas · Reiniciar: R</div>
+    <div id="help">Mover: WASD / Setas · Reiniciar: R · Pastilha azul ativa POWER por alguns segundos</div>
 
     <div id="game-over">
       <div id="game-over-content">
